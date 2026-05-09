@@ -1,1 +1,390 @@
+# Implementasi Web Belanja Online
 
+Implementasi web belanja online adalah proses membangun sistem e-commerce dari tahap desain hingga menjadi aplikasi yang dapat digunakan oleh pelanggan dan admin.
+
+---
+
+# 1. Arsitektur Sistem
+
+## Struktur Sistem
+
+```text id="6jk4r7"
+User Browser / Mobile
+          ↓
+Frontend Website
+          ↓
+Backend Server
+          ↓
+Database
+          ↓
+Payment Gateway & Shipping API
+```
+
+---
+
+# 2. Teknologi yang Digunakan
+
+## Frontend
+
+Digunakan untuk tampilan pengguna.
+
+Teknologi:
+
+* HTML
+* CSS
+* JavaScript
+* Bootstrap
+* Tailwind CSS
+* React.js / Vue.js
+
+---
+
+## Backend
+
+Mengatur logika bisnis.
+
+Teknologi:
+
+* PHP Laravel
+* Node.js Express
+* Django
+
+---
+
+## Database
+
+Penyimpanan data:
+
+* MySQL
+* PostgreSQL
+
+---
+
+## Payment Gateway
+
+Untuk pembayaran online:
+
+* Midtrans
+* Xendit
+* DOKU
+
+---
+
+## API Pengiriman
+
+Integrasi ongkir:
+
+* RajaOngkir
+* JNE API
+* SiCepat API
+
+---
+
+# 3. Implementasi Database
+
+# A. Tabel Users
+
+```sql id="m4v4m8"
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100),
+    email VARCHAR(100),
+    password VARCHAR(255),
+    role VARCHAR(20)
+);
+```
+
+---
+
+# B. Tabel Produk
+
+```sql id="w6g59w"
+CREATE TABLE produk (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama_produk VARCHAR(100),
+    harga INT,
+    stok INT,
+    gambar VARCHAR(255),
+    deskripsi TEXT
+);
+```
+
+---
+
+# C. Tabel Cart
+
+```sql id="ef6myj"
+CREATE TABLE cart (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    produk_id INT,
+    qty INT
+);
+```
+
+---
+
+# D. Tabel Orders
+
+```sql id="vfjix2"
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    total_harga INT,
+    status VARCHAR(50),
+    created_at TIMESTAMP
+);
+```
+
+---
+
+# E. Tabel Detail Orders
+
+```sql id="4v20od"
+CREATE TABLE order_detail (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    produk_id INT,
+    qty INT,
+    subtotal INT
+);
+```
+
+---
+
+# 4. Implementasi Fitur Utama
+
+# A. Login & Register
+
+## Fungsi
+
+* Autentikasi user
+* Hak akses admin/user
+
+## Implementasi
+
+* JWT Authentication
+* Session login
+* bcrypt password hashing
+
+---
+
+# B. Katalog Produk
+
+## Fungsi
+
+Menampilkan produk.
+
+## Fitur:
+
+* Search produk
+* Filter kategori
+* Sorting harga
+* Pagination
+
+---
+
+# C. Keranjang Belanja
+
+## Fungsi
+
+Menyimpan pesanan sementara.
+
+## Implementasi
+
+* Session storage
+  ATAU
+* Database cart
+
+---
+
+# D. Checkout
+
+## Form Checkout
+
+* Nama penerima
+* Nomor HP
+* Alamat
+* Kurir
+* Metode pembayaran
+
+---
+
+# E. Pembayaran Online
+
+## Alur Pembayaran
+
+```text id="rj2vl0"
+Checkout
+   ↓
+Kirim Data ke Payment Gateway
+   ↓
+User Melakukan Pembayaran
+   ↓
+Callback Pembayaran
+   ↓
+Status Order Update
+```
+
+---
+
+# F. Tracking Pesanan
+
+## Status Order
+
+* Pending
+* Paid
+* Diproses
+* Dikirim
+* Selesai
+
+---
+
+# 5. Implementasi Frontend
+
+## Contoh Card Produk
+
+```html id="3n08ew"
+<div class="card">
+   <img src="produk.jpg">
+   <h3>Sepatu Sneakers</h3>
+   <p>Rp 350.000</p>
+   <button>Beli</button>
+</div>
+```
+
+---
+
+# 6. Implementasi Backend
+
+## Contoh API Node.js
+
+```javascript id="2x9zv3"
+app.get('/produk', async (req, res) => {
+   const data = await db.query('SELECT * FROM produk');
+   res.json(data);
+});
+```
+
+---
+
+# 7. Implementasi REST API
+
+| Method | Endpoint  | Fungsi           |
+| ------ | --------- | ---------------- |
+| GET    | /produk   | Ambil produk     |
+| POST   | /cart     | Tambah keranjang |
+| POST   | /checkout | Checkout         |
+| POST   | /login    | Login            |
+| GET    | /orders   | Riwayat order    |
+
+---
+
+# 8. Implementasi Dashboard Admin
+
+## Fitur:
+
+* Tambah produk
+* Edit produk
+* Hapus produk
+* Kelola pesanan
+* Statistik penjualan
+
+---
+
+# 9. Implementasi Keamanan
+
+## Wajib:
+
+✅ HTTPS
+✅ Hash password
+✅ Validasi input
+✅ Anti SQL Injection
+✅ CSRF protection
+✅ Authentication middleware
+
+---
+
+# 10. Implementasi Responsive Design
+
+## Desktop
+
+* Grid 4–5 produk
+
+## Mobile
+
+* Grid 1–2 produk
+* Bottom navigation
+
+Gunakan:
+
+* Flexbox
+* CSS Grid
+* Media Query
+
+---
+
+# 11. Testing Sistem
+
+| Jenis Testing       | Tujuan          |
+| ------------------- | --------------- |
+| Functional Testing  | Fitur berjalan  |
+| UI Testing          | Tampilan sesuai |
+| Security Testing    | Sistem aman     |
+| Performance Testing | Website cepat   |
+
+---
+
+# 12. Deployment
+
+## Frontend Hosting
+
+* [Vercel](https://vercel.com?utm_source=chatgpt.com)
+* [Netlify](https://www.netlify.com?utm_source=chatgpt.com)
+
+## Backend Hosting
+
+* [Railway](https://railway.app?utm_source=chatgpt.com)
+* [Render](https://render.com?utm_source=chatgpt.com)
+
+## Database Cloud
+
+* [Supabase](https://supabase.com?utm_source=chatgpt.com)
+* [PlanetScale](https://planetscale.com?utm_source=chatgpt.com)
+
+---
+
+# 13. Kesimpulan
+
+Implementasi web belanja online membutuhkan:
+
+* Frontend interaktif
+* Backend stabil
+* Database aman
+* Sistem pembayaran online
+
+Website e-commerce yang baik harus:
+
+* Responsive
+* Cepat
+* Aman
+* Mudah digunakan
+
+Dengan implementasi yang tepat, web belanja online dapat meningkatkan:
+
+* Penjualan
+* Efisiensi bisnis
+* Kepuasan pelanggan
+
+Jika mau, saya juga bisa bantu:
+
+* source code e-commerce lengkap
+* implementasi Laravel full stack
+* React + Node.js project
+* desain dashboard admin
+* ERD & UML
+* flowchart sistem
+* API backend lengkap
+* template toko online modern
+* sistem login JWT
+* integrasi payment gateway
