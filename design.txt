@@ -1,1 +1,352 @@
+# Desain Web Belanja Online
 
+Berikut contoh desain modern untuk website e-commerce / belanja online yang cocok untuk:
+
+* Tugas sekolah/kuliah
+* UMKM
+* Startup online shop
+* Marketplace sederhana
+
+---
+
+# 1. Konsep Desain
+
+## Tema
+
+Modern E-Commerce
+
+## Gaya UI
+
+* Clean
+* Minimalis
+* Responsive
+* Modern shopping experience
+
+## Warna Utama
+
+* Biru → `#2563EB`
+* Putih → `#FFFFFF`
+* Abu muda → `#F3F4F6`
+* Hitam → `#111827`
+
+## Font
+
+* Poppins
+* Inter
+* Roboto
+
+---
+
+# 2. Struktur Halaman Website
+
+# A. Homepage
+
+## Komponen Utama
+
+### Navbar
+
+Berisi:
+
+* Logo toko
+* Home
+* Kategori
+* Promo
+* Keranjang
+* Login/Register
+
+---
+
+## Hero Banner
+
+Banner besar promo.
+
+Contoh:
+
+> “Diskon Hingga 70% Hari Ini”
+
+Tombol:
+
+* Belanja Sekarang
+* Lihat Promo
+
+---
+
+## Kategori Produk
+
+Contoh kategori:
+
+* Fashion
+* Elektronik
+* Sepatu
+* Tas
+* Aksesoris
+
+Tampilan icon/grid.
+
+---
+
+## Produk Populer
+
+Card produk berisi:
+
+* Gambar produk
+* Nama produk
+* Harga
+* Rating
+* Tombol “Tambah ke Keranjang”
+
+---
+
+## Promo Section
+
+Banner:
+
+* Gratis Ongkir
+* Cashback
+* Flash Sale
+
+---
+
+## Footer
+
+Berisi:
+
+* Kontak
+* Sosial media
+* FAQ
+* Tentang Kami
+
+---
+
+# 3. Desain Halaman Produk
+
+## Layout Produk
+
+```text id="gr6m65"
+-----------------------------------
+| FILTER |      PRODUK           |
+|--------|-----------------------|
+| Harga  | [Card Produk]         |
+| Brand  | [Card Produk]         |
+| Rating | [Card Produk]         |
+-----------------------------------
+```
+
+---
+
+## Card Produk
+
+Isi:
+
+* Foto produk
+* Nama
+* Harga diskon
+* Rating bintang
+* Tombol beli
+
+---
+
+# 4. Desain Halaman Detail Produk
+
+## Komponen:
+
+* Foto besar produk
+* Deskripsi
+* Harga
+* Pilihan warna/ukuran
+* Stok
+* Tombol:
+
+  * Tambah Keranjang
+  * Beli Sekarang
+
+---
+
+# 5. Desain Keranjang Belanja
+
+## Isi:
+
+* Daftar produk
+* Jumlah item
+* Harga total
+* Tombol checkout
+
+---
+
+# 6. Desain Checkout
+
+## Form:
+
+* Nama penerima
+* Nomor HP
+* Alamat
+* Kurir
+* Metode pembayaran
+
+## Pembayaran
+
+* Transfer bank
+* E-wallet
+* QRIS
+
+Tombol:
+
+> “Bayar Sekarang”
+
+---
+
+# 7. User Flow
+
+```text id="1z7blw"
+Homepage
+   ↓
+Pilih Produk
+   ↓
+Detail Produk
+   ↓
+Tambah Keranjang
+   ↓
+Checkout
+   ↓
+Pembayaran
+   ↓
+Pesanan Diproses
+```
+
+---
+
+# 8. Wireframe Sederhana
+
+## Homepage
+
+```text id="dgb0vg"
+------------------------------------------------
+LOGO | Home | Kategori | Promo | Cart | Login
+------------------------------------------------
+
+      [ BANNER PROMO BESAR ]
+
+------------------------------------------------
+KATEGORI PRODUK
+
+[ Fashion ] [ Elektronik ] [ Sepatu ]
+
+------------------------------------------------
+PRODUK POPULER
+
+[ Produk ] [ Produk ] [ Produk ]
+
+------------------------------------------------
+FOOTER
+------------------------------------------------
+```
+
+---
+
+# 9. Desain Mobile
+
+## Mobile Navigation
+
+Bottom navbar:
+
+* Home
+* Search
+* Cart
+* Orders
+* Profile
+
+## Mobile UI
+
+✅ Tombol besar
+✅ Scroll nyaman
+✅ Checkout cepat
+✅ Responsive
+
+---
+
+# 10. Fitur Tambahan
+
+## Smart Features
+
+* Dark mode
+* Wishlist
+* Live chat
+* Tracking pesanan
+* Voucher diskon
+* Flash sale timer
+
+---
+
+# 11. Dashboard Admin
+
+## Fitur Admin
+
+* Kelola produk
+* Kelola stok
+* Kelola pesanan
+* Statistik penjualan
+* Manajemen user
+
+---
+
+# 12. Teknologi Rekomendasi
+
+## Frontend
+
+* HTML
+* CSS
+* JavaScript
+* React.js
+* Tailwind CSS
+
+## Backend
+
+* Laravel
+* Node.js
+
+## Database
+
+* MySQL
+* PostgreSQL
+
+---
+
+# 13. Inspirasi Desain
+
+Gaya desain seperti:
+
+* Tokopedia
+* Shopee
+* Lazada
+
+---
+
+# 14. Tips UI/UX
+
+## Gunakan
+
+✅ Foto produk HD
+✅ Navigasi sederhana
+✅ Search cepat
+✅ Filter produk
+✅ Loading cepat
+
+## Hindari
+
+❌ Terlalu banyak popup
+❌ Warna berlebihan
+❌ Checkout terlalu panjang
+❌ Font kecil
+
+Jika mau, saya juga bisa bantu:
+
+* mockup Figma e-commerce
+* coding HTML CSS JS
+* template React e-commerce
+* dashboard admin lengkap
+* database MySQL
+* ERD & UML
+* flowchart sistem
+* implementasi Laravel
+* API backend toko online
+* landing page marketplace modern
