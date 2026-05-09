@@ -1,1 +1,280 @@
+# Analisis Web Belanja Online
 
+## 1. Pengertian
+
+Web belanja online adalah platform e-commerce yang memungkinkan pengguna membeli produk melalui internet tanpa datang langsung ke toko.
+
+Contoh platform:
+
+* Tokopedia
+* Shopee
+* Lazada
+* Bukalapak
+
+---
+
+# 2. Tujuan Sistem
+
+Tujuan utama web belanja online:
+
+* Mempermudah transaksi jual beli
+* Menjangkau pelanggan lebih luas
+* Menghemat waktu dan biaya
+* Mendukung pembayaran digital
+* Meningkatkan penjualan bisnis
+
+---
+
+# 3. Analisis Kebutuhan Sistem
+
+## A. Kebutuhan Pengguna
+
+### Pembeli
+
+* Registrasi akun
+* Login
+* Melihat produk
+* Mencari barang
+* Menambahkan ke keranjang
+* Checkout
+* Pembayaran online
+* Tracking pesanan
+
+### Penjual/Admin
+
+* Mengelola produk
+* Mengelola stok
+* Mengelola pesanan
+* Melihat laporan penjualan
+
+---
+
+# 4. Analisis Fitur Utama
+
+| Fitur             | Fungsi                     |
+| ----------------- | -------------------------- |
+| Login/Register    | Identitas pengguna         |
+| Katalog Produk    | Menampilkan barang         |
+| Search & Filter   | Mempermudah pencarian      |
+| Keranjang Belanja | Menyimpan produk sementara |
+| Checkout          | Konfirmasi pembelian       |
+| Payment Gateway   | Pembayaran online          |
+| Tracking Order    | Memantau pengiriman        |
+| Wishlist          | Menyimpan produk favorit   |
+| Review & Rating   | Penilaian produk           |
+
+---
+
+# 5. Analisis UI/UX
+
+## UI yang Baik
+
+✅ Tampilan bersih
+✅ Navigasi mudah
+✅ Foto produk jelas
+✅ Responsive mobile
+✅ Checkout cepat
+
+## Masalah yang Sering Terjadi
+
+❌ Website lambat
+❌ Iklan terlalu banyak
+❌ Checkout rumit
+❌ Produk sulit dicari
+
+## Rekomendasi
+
+* Gunakan desain minimalis
+* Optimalkan loading
+* Gunakan kategori jelas
+* Sediakan dark mode
+
+---
+
+# 6. Analisis Database
+
+## Tabel User
+
+```sql id="nzy2do"
+users (
+  id_user,
+  nama,
+  email,
+  password
+)
+```
+
+## Tabel Produk
+
+```sql id="x9w9uy"
+produk (
+  id_produk,
+  nama_produk,
+  harga,
+  stok,
+  gambar
+)
+```
+
+## Tabel Pesanan
+
+```sql id="gofrwb"
+orders (
+  id_order,
+  id_user,
+  total,
+  status
+)
+```
+
+## Tabel Detail Order
+
+```sql id="ydzq0q"
+detail_order (
+  id_detail,
+  id_order,
+  id_produk,
+  qty
+)
+```
+
+---
+
+# 7. Analisis Teknologi
+
+## Frontend
+
+* HTML
+* CSS
+* JavaScript
+* React.js / Vue.js
+
+## Backend
+
+* Laravel
+* Node.js
+* Django
+
+## Database
+
+* MySQL
+* PostgreSQL
+
+## Hosting
+
+* Cloud server
+* VPS
+
+---
+
+# 8. Analisis Proses Bisnis
+
+## Alur Pembelian
+
+```text id="j8qjz8"
+User Login
+    ↓
+Pilih Produk
+    ↓
+Tambah Keranjang
+    ↓
+Checkout
+    ↓
+Pembayaran
+    ↓
+Pesanan Diproses
+    ↓
+Pengiriman
+    ↓
+Pesanan Diterima
+```
+
+---
+
+# 9. Analisis Keamanan
+
+## Keamanan yang Dibutuhkan
+
+* HTTPS
+* Enkripsi password
+* OTP login
+* Validasi pembayaran
+* Anti SQL Injection
+* Anti spam & bot
+
+---
+
+# 10. Analisis SWOT
+
+## Strength (Kekuatan)
+
+* Praktis
+* Bisa belanja 24 jam
+* Banyak pilihan produk
+
+## Weakness (Kelemahan)
+
+* Risiko penipuan
+* Ketergantungan internet
+* Barang tidak bisa dicek langsung
+
+## Opportunity (Peluang)
+
+* Pengguna internet meningkat
+* Cashless berkembang
+* UMKM go digital
+
+## Threat (Ancaman)
+
+* Persaingan tinggi
+* Cyber attack
+* Perang harga
+
+---
+
+# 11. Analisis Kelebihan & Kekurangan
+
+## Kelebihan
+
+✅ Mudah digunakan
+✅ Transaksi cepat
+✅ Hemat waktu
+✅ Jangkauan luas
+
+## Kekurangan
+
+❌ Ketergantungan server
+❌ Risiko data bocor
+❌ Pengiriman bisa terlambat
+
+---
+
+# 12. Kesimpulan
+
+Web belanja online menjadi solusi modern dalam transaksi digital. Sistem yang baik harus:
+
+* Cepat
+* Aman
+* Responsive
+* User friendly
+* Mendukung pembayaran digital
+
+Keberhasilan e-commerce dipengaruhi oleh:
+
+* UI/UX
+* Keamanan sistem
+* Kualitas layanan
+* Kecepatan transaksi
+
+Jika mau, saya juga bisa bantu:
+
+* desain web e-commerce
+* implementasi sistem belanja online
+* ERD & database lengkap
+* UML diagram
+* flowchart sistem
+* coding HTML/CSS/JS
+* project Laravel e-commerce
+* React e-commerce UI
+* dashboard admin toko online
+* laporan skripsi BAB 1–5
